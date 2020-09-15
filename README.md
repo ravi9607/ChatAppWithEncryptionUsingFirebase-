@@ -11,5 +11,5 @@
 
 ## Login
 
-### Login Using Email
+### Login Using Email and Password
 <img src="image/img1.jpeg" hight=200 width=180>
