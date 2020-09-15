@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "465980622627",
+    "firebase_url": "https://chatapp-with-encryption.firebaseio.com",
+    "project_id": "chatapp-with-encryption",
+    "storage_bucket": "chatapp-with-encryption.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465980622627:android:6e4b4a88509c081ed3ee96",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.chatappwithencryptionusingfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465980622627-ntbsjshrrf2eocn3hrekcic65c0gal63.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.chatappwithencryptionusingfirebase",
+            "certificate_hash": "8ba4efeb4c3a9345d77f0e11efbc61df319550d8"
+          }
+        },
+        {
+          "client_id": "465980622627-hv0j2uek2o36hn1ual403a00esmb7cmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUk-QV_dV0XNDWB5_uDCQU0dVN6LVZEjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465980622627-hv0j2uek2o36hn1ual403a00esmb7cmv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
