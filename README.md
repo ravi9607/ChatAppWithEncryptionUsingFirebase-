@@ -67,15 +67,26 @@ For database create the data base in test mode. And done,    we will be adding m
 Encryption is a method to transform the message or text    in to unreadable format. encryption algorithm jumbles the message letters in such a way that it becomes no more understandable. To understand that message the reciever has  to decode it again to transform it in to original form. Their are various way of encryption depending on the key type. For end to end encryption we need two keys, the private key and the public key. Working of E2EE in explained earlier. To see if our encryption method works or not we initially commented the encryption code and sent few message and then uncommented the code to see the encrypted code. following is the output of messages stored on the database before and after encryption.
 
 <img src="image/encrypt.png" >
+ we can see how the encryption code encrypted the "Are you in canada" and "Hey buddy" in to unreadable encrypted form. while the message recieved by the receiver is in the      
+ original form.
+ 
+ #### How does it works?: 
+So as we know if we encrypt a text  we also need to decrypt that text. When the sender types the message and hits the send button normally it goes directly to the server, but here we take that code and encrypt it using    the receivers public key. The encrypted text is stored in one variable is then sent to server. This prevent the hacker from
+ 
+getting the message. Even if the hacker get the message it would be in encrypted form. This encrypted message when received at receiver end gets decrypted automatically before getting display using that receivers private key. This private key is only stored in receivers phone.
+# 	CONCLUSION
+In this paper, we introduced the working and implemen- tation of encrypted chat application. How the messages are encrypted on device before moving to server. However, This application for now only deals with text messages, we are looking forward to encrypt the images before sending to server using computer vision techniques.The performance of the application over hundereds of users is not test yet as we have to create dummy user. Performance testing and image encrytion are in our list of future task.
 
 
-## SignUp   
+
+
+## SignUp Page  
 
 ### Authenticate with Firebase Using Email Link in Android
 <img src="image/img2.jpeg" hight=200 width=180>
 
 
-## Login
+## Login Page
 
 ### Login Using Email and Password
 <img src="image/img1.jpeg" hight=200 width=180>
