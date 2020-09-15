@@ -67,6 +67,8 @@ For database create the data base in test mode. And done,    we will be adding m
 Encryption is a method to transform the message or text    in to unreadable format. encryption algorithm jumbles the message letters in such a way that it becomes no more understandable. To understand that message the reciever has  to decode it again to transform it in to original form. Their are various way of encryption depending on the key type. For end to end encryption we need two keys, the private key and the public key. Working of E2EE in explained earlier. To see if our encryption method works or not we initially commented the encryption code and sent few message and then uncommented the code to see the encrypted code. following is the output of messages stored on the database before and after encryption.
 
 <img src="image/encrypt.png" >
+
+
 ## SignUp   
 
 ### Authenticate with Firebase Using Email Link in Android
