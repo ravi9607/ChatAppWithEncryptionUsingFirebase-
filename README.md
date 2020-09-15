@@ -1,4 +1,4 @@
-# ChatAppWithEncryptionUsingFirebase-
+# Chat App With Encryption Using Firebase-
 # BACKGROUND
 ## A.	Instant Chat Applications
 ### A. Whatsapp:
