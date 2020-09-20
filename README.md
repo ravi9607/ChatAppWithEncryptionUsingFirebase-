@@ -80,7 +80,7 @@ In this paper, we introduced the working and implemen- tation of encrypted chat 
 
 
 
-## SignUp Page  
+## Register Page  
 
 ### Authenticate with Firebase Using Email Link in Android
 <img src="image/img2.jpeg" hight=200 width=180>

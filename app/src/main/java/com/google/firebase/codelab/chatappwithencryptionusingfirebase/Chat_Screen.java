@@ -32,7 +32,7 @@ public class Chat_Screen extends AppCompatActivity {
     private ListView listView;
     private DatabaseReference databaseReference;
     //FirebaseDatabase database = FirebaseDatabase.getInstance();
-    public String stringMessage;
+    private String stringMessage;
     private byte encryptionKey[]={9, 115, 51, 86, 105, 4, -31, -23, -68, 88, 17, 20, 3, -105, 119, -53};
     private Cipher cipher,decipher;
     private SecretKeySpec secretKeySpec;
@@ -60,15 +60,10 @@ public class Chat_Screen extends AppCompatActivity {
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    stringMessage = (String)dataSnapshot.getValue().toString();
+                    stringMessage = stringMessage.substring(1, stringMessage.length() - 1);
 
-                    stringMessage = (String) dataSnapshot.getValue();
-                    if (stringMessage != null) {
-                        stringMessage = stringMessage.substring(1, stringMessage.length() - 1);
-                    }
-
-                    assert stringMessage != null;
-                    String[] stringMessageArray;
-                    stringMessageArray  = ", ".split(stringMessage);
+                    String[] stringMessageArray = stringMessage.split(", ");
                     Arrays.sort(stringMessageArray);
                     String[] stringFinal = new String[stringMessageArray.length * 2];
 
