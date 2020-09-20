@@ -33,7 +33,7 @@ public class Chat_Screen extends AppCompatActivity {
     private DatabaseReference databaseReference;
     //FirebaseDatabase database = FirebaseDatabase.getInstance();
     private String stringMessage;
-    private byte encryptionKey[]={9, 115, 51, 86, 105, 4, -31, -23, -68, 88, 17, 20, 3, -105, 119, -53};
+    private byte encryptionKey[]={1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6};
     private Cipher cipher,decipher;
     private SecretKeySpec secretKeySpec;
 
