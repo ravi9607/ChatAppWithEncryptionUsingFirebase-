@@ -17,12 +17,19 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailID;
     EditText password;
+    EditText name;
+    EditText age;
+    EditText gender;
     Button signUp;
     Button logIn;
     FirebaseAuth firebaseAuth;
@@ -33,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         emailID=findViewById(R.id.editText1);
         password=findViewById(R.id.editText2);
+        name=findViewById(R.id.editText3);
+        age=findViewById(R.id.editText4);
+        gender=findViewById(R.id.editText5);
         signUp=findViewById(R.id.button1);
         logIn = findViewById(R.id.button2);
         firebaseAuth=FirebaseAuth.getInstance();
@@ -42,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email=emailID.getText().toString();
                 String pwd=password.getText().toString();
+                final String Name=name.getText().toString();
+                final String Age=age.getText().toString();
+                final String Gender=gender.getText().toString();
+
                 if(email.isEmpty()){
                     emailID.setError("Please enter Email ID ");
                     emailID.requestFocus();
@@ -57,7 +71,17 @@ public class MainActivity extends AppCompatActivity {
                             if(!task.isSuccessful()){
                                 Toast.makeText(MainActivity.this," Unable to SignUp ",Toast.LENGTH_SHORT).show();
                             }else {
-                                startActivity(new Intent(MainActivity.this,Chat_Screen.class));
+                                String user_id=firebaseAuth.getUid();
+
+                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("AdminMaster").child(user_id);
+                                Map map=new HashMap();
+                                map.put("Name",Name);
+                                map.put("Age",Age);
+                                map.put("Gender",Gender);
+
+
+                                databaseReference.setValue(map);
+                                startActivity(new Intent(MainActivity.this,details.class));
 
                             }
                         }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChatApp with Encryption using Firebase</string>
+    <string name="todo">TODO</string>
 </resources>

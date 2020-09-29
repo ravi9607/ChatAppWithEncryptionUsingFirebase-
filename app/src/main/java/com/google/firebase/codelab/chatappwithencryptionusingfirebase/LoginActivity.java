@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else if(pwd.isEmpty()){
                     password.setError(" please enter Password ");
                     password.requestFocus();
-                }else if(!(email.isEmpty()&&pwd.isEmpty())){
+                }else if(!(email.isEmpty() && pwd.isEmpty())){
                     firebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             }else {
                                 Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginActivity.this,Chat_Screen.class));
+                                startActivity(new Intent(LoginActivity.this,details.class));
                             }
                         }
                     });
